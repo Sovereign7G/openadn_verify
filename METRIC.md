@@ -9,6 +9,9 @@ from someone other than the author — of having run `./verify.sh`.
 
 **State.** No independent report received. Verified by the author only.
 
+**Published.** https://github.com/Sovereign7G/openadn_verify/releases/tag/openadn-verify-v1.0.0
+(2026-10-03; public). The clock is running.
+
 **To close it.** Run `./verify.sh` on a downloaded archive; report the result (a one-line
 `reproduced on <os>, 11/11, exit 0` is enough — see `EXAMPLE_REPORT.md`). Any report, pass or fail, closes
 the metric. Then update this file with the date and a link to the report.

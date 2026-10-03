@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.1.0
+
+Added the **offline A2A testing-environment conformance subset (L1–L5)**: interface contract, isolated
+security (mutual `did:adn` + replay resistance), state alignment, transport, and observability (correlation
+id). Probe count 11 → 12.
+
+**Not included:** service virtualization (L6) and fault injection (L6b) — both require a Docker downstream,
+and this bundle is offline-only. They are shipped separately in the corpus as `a2a_env_conformance.py`.
+
 ## 1.0.0
 
 First published release. Self-contained, offline verification of the OpenADN reference implementation.

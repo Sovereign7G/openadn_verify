@@ -17,7 +17,7 @@ BUNDLE="$HERE/bundle"
 PARENT=$(CDPATH= cd -- "$HERE/.." && pwd)
 
 PROBES="oadnrun_a2a_conformance_probe oadnrun_mcp_conformance_probe oadnrun_integration_probe \
-oadnrun_dht_wire_probe oadnrun_handshake_probe openadn_recovery_check \
+oadnrun_dht_wire_probe oadnrun_handshake_probe openadn_recovery_check a2a_env_offline_check \
 chainverify_anchor_probe chainverify_card_anchor_probe \
 sovereignl1_chain_probe sovereignl1_deterministic_vm_probe sovereignl1_internal_mining_probe"
 

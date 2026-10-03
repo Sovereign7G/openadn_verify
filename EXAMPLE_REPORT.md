@@ -6,7 +6,7 @@ than a pass, so paste the failing line verbatim.
 ```
 date:                2026-10-05
 os / python:         Ubuntu 24.04 / Python 3.12
-archive:             openadn_verify-1.0.0.tar.gz
+archive:             openadn_verify-<version>.tar.gz
 archive sha256:      <the sha256 you computed for the tarball>
 pubkey used:         <the Ed25519 public key from the release page, not only from inside the archive>
 archive signature:   OK

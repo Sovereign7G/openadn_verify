@@ -1,4 +1,4 @@
-# openadn_verify 1.0.0
+# openadn_verify 1.1.0
 
 The verification bundle for the **S7G-L1 / OpenADN** corpus — a reference implementation of **OpenADN**, an
 open protocol that gives autonomous agents their own identity, discovery, and task hand-off layer.
@@ -9,7 +9,7 @@ Run one command. Read the verdict.
 ./verify.sh
 ```
 
-Expected: `PASS` lines ending in `OPENADN VERIFY: 11/11 probes pass`, and exit code `0`.
+Expected: `PASS` lines ending in `OPENADN VERIFY: 12/12 probes pass`, and exit code `0`.
 Requirements: `python3` and the `cryptography` package. No network. No account. No token. No install.
 
 **Words you don't need to know** (each is resolved by a file in `bundle/`): `oadnrun` = the OpenADN runtime
@@ -46,7 +46,7 @@ If either control reports success when it should have failed, the bundle is chec
 
 1. **Signature verifies the archive** — detached Ed25519 (`openadn_verify-<version>.tar.gz.sig`).
 2. **Archive verifies the artifacts** — `MANIFEST.sha256` + `MANIFEST.sig`; enforced by `verify.sh`.
-3. **Artifacts verify the claims** — the 11 probes; run by `verify.sh`.
+3. **Artifacts verify the claims** — the 12 probes; run by `verify.sh`.
 
 Verify in that order: signature first, then unpack, then `./verify.sh`.
 
@@ -69,7 +69,10 @@ If you run this, please say what happened — see `EXAMPLE_REPORT.md`. The metri
 **Included:** the OpenADN runtime (identity, handshake, DHT, recovery), the Merkle `chainverify` anchor,
 and the `sovereignl1` closure / determinism / internal-mining checks — everything that runs offline.
 **Excluded by design:** anything requiring the doxx token, ICP, or a Solana RPC; anything requiring a
-pre-installed corpus; any secret.
+pre-installed corpus; any secret. The A2A conformance check covers the **five offline layers** (contract,
+security, state alignment, transport, observability); the **two layers that require a downstream service**
+(service virtualization and fault injection) are excluded because they need Docker, and this bundle is
+offline-only.
 
 See `VERIFY.md` (how, and the controls) and `WHAT_THIS_PROVES.md` (what a pass does and does not mean).
 

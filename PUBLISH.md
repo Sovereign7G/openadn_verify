@@ -3,17 +3,19 @@
 One repo, one tag, one release. Publishing turns the archive from a local file into an artifact a stranger
 can find, verify, and report on.
 
-## Artifact of record (`v1.0.0`)
+## Artifacts of record
 
 ```
-archive   : dist/openadn_verify-1.0.0.tar.gz
-signature : dist/openadn_verify-1.0.0.tar.gz.sig
-sha256    : 86143bc1adc49b1f9974c35cc6784658e39e6a5ccf8f86e449a5a232dc774f30
-pubkey    : ba7b971610fdac9768fb52fb866ac37dd5436d610f701e30329e363bc7504cb6
-published : 2026-10-03
+version  archive                              sha256                                                            published
+v1.0.0   dist/openadn_verify-1.0.0.tar.gz     86143bc1adc49b1f9974c35cc6784658e39e6a5ccf8f86e449a5a232dc774f30  2026-10-03
+v1.1.0   dist/openadn_verify-1.1.0.tar.gz     cbf0335e05f79791f84adf8399d6fa655c60167cb1caf124e2a2a90aa53755a9  2026-10-03
 ```
+
+`pubkey` (both versions, same key):
+`ba7b971610fdac9768fb52fb866ac37dd5436d610f701e30329e363bc7504cb6`
 
 The private key is `~/.apex/openadn_release_key.json` (chmod 600). It is **never** committed or published.
+v1.1.0 is additive; v1.0.0's tag and release stay valid so either can be verified.
 
 ## Quick path with the GitHub CLI (`gh`)
 

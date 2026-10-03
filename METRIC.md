@@ -9,8 +9,15 @@ from someone other than the author — of having run `./verify.sh`.
 
 **State.** No independent report received. Verified by the author only.
 
-**Published.** https://github.com/Sovereign7G/openadn_verify/releases/tag/openadn-verify-v1.0.0
-(2026-10-03; public). The clock is running.
+**Published.** Two releases, same key, both public:
+
+| version | release | sha256 |
+|---|---|---|
+| v1.0.0 | https://github.com/Sovereign7G/openadn_verify/releases/tag/openadn-verify-v1.0.0 | `86143bc1adc49b1f9974c35cc6784658e39e6a5ccf8f86e449a5a232dc774f30` |
+| v1.1.0 | https://github.com/Sovereign7G/openadn_verify/releases/tag/openadn-verify-v1.1.0 | `cbf0335e05f79791f84adf8399d6fa655c60167cb1caf124e2a2a90aa53755a9` |
+
+Key (both versions): `ba7b971610fdac9768fb52fb866ac37dd5436d610f701e30329e363bc7504cb6`.
+The clock runs from **v1.0.0's** date; a new release does **not** restart it.
 
 **To close it.** Run `./verify.sh` on a downloaded archive; report the result (a one-line
 `reproduced on <os>, 11/11, exit 0` is enough — see `EXAMPLE_REPORT.md`). Any report, pass or fail, closes

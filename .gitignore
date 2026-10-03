@@ -1,0 +1,20 @@
+# Never commit secrets or the release private key.
+openadn_release_key.json
+*.key
+*.pem
+id.json
+
+# The signed tarball IS the artifact and must be tracked.
+# (!dist/ un-ignores the directory in case a global gitignore excludes "dist/".)
+!dist/
+!dist/*.tar.gz
+!dist/*.tar.gz.sig
+
+# The extracted build tree is not tracked; the tarball is what ships.
+dist/openadn_verify-*/
+
+# Noise.
+__pycache__/
+*.pyc
+*.bak
+*.bak-*
